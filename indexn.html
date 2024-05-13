@@ -1,0 +1,31 @@
+<html> 
+<head> 
+    <title>Eventos de Mouse</title> 
+    <script src="gamesWeb.js"> </script> 
+</head> 
+<body> 
+    <canvas id="canv" width="800" height="700"> Este browser não suporta o objeto canvas do HTML5.
+         </canvas> 
+         <script>
+        canvas = document.getElementByld("canv"); 
+         ctx = canvas.getContext("2d"); 
+         nave = new lmage(); 
+         nave.src = "img/nave.png"; 
+         x = 400- nave.width/2; 
+         nave.onload = function() {
+            ctx.drawlmage(nave,x, 700-160),
+         }
+
+         canvas.onmousemove = function (e){
+        
+          var col = e.pageX; // - this.offsetLeft; 
+          var lin = e.pageY; // - this.offsetTop; 
+          movimentaNaveMouse(col -80,lin);
+         }
+
+         canvas.onmousedonw = function (e){
+        
+        var col = e.pageX; // - this.offsetLeft; 
+     
+        movimentaNaveMouse(col -80,lin);
+       }
