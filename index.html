@@ -1,24 +1,28 @@
-<!--Arquivo EventosTecldo.html-->
-<html>
-<head>
-<title>Evento de Teclado</title>
-</head>
-</html>
-<body>
-    <label for=""digitado">Teste de Eventos de Teclado:</label>
-    <textarea id="digitado"></textarea>]
-    <label for="resposta">Eventos Tratados:</label>
-    <textarea id="resposta" rows="30" cols="50"></textarea>
-</script>
-    digitado.addEventListener("keydown".
-    function(evento){
-    resposta.innerHTML  += "/nTecla" Pressionada "  +
-<evento class="keyCode:
-    });
-    digitado.addEventListener("keyup",
-    function(evento) {
-        resposta.innerHTML +="/nTecla Liberada";
-    });
-</script>
-</body>
-</html>
+<html> 
+<head> 
+    <title>colisão</title> 
+    <script src="gamesWeb.js"> </script> 
+</head> 
+<body> 
+    <canvas id="canv" width="1000" height="600"> Este browser não suporta o objeto canvas do HTML5.
+         </canvas> 
+         <script>
+            canvas = document.getElementByld("canv"); 
+            ctx = canvas.getContext("2d"); 
+            nave = new image();
+            nave.scr = "img/nave.png";
+            nave.onload = function(){
+                xNave = canvas.width / 2 - nave.width;
+                yNave = canvas.height - nave.height
+                ctx.drawimage(nave,xNave,yNave)
+        }
+            inimigo = new image();
+            inimigo.scr = "img/inimigo.png";
+            inimigo.onload = function(){
+                xInimigo = canvas.width / 2 - nave.width;
+                yInimigo = 0
+                ctx.drawimage(inimigo,xInimigo,yInimigo)
+        }
+
+       
+            
