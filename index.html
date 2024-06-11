@@ -1,15 +1,15 @@
 <html>
 <head>
 <title>GamesWeb</title>
-<script src="gameLoop.js"></script>
-<script src="nave.js"></script>
-<script src="tiro.js"></script>
-<script src="inimigo.js"></script>
-<script src="colisao.js"></script>
-<script src="explosao.js"></script>
-<script src="spriteSheet.js"></script>
-<script src="fundo.js"></script>
-<script src="painel.js"></script>
+<script src="./java/gameloop.js"></script>
+<script src="./java/nave.js"></script>
+<script src="./java/tiro.js"></script>
+<script src="./java/inimigo.js"></script>
+<script src="./java/colisão.js"></script>
+<script src="./java/explosao.js"></script>
+<script src="./java/spriteSheet.js"></script>
+<script src="./java/fundo.js"></script>
+<script src="./java/painel.js"></script>
 </head>
 <body>
     <canvas id="canv" width="500" height="500"> Este browser não suporta HTML5
@@ -25,31 +25,31 @@
     imagensCarregadas = 0;
 
     imgEspaco = new Image();
-    imgEspaco.src = 'img/espaco.png';
+    imgEspaco.src = "./img/praiainha.png";
     imgEspaco.onload = verificaCarregamento;
 
     imgEstrelas = new Image();
-    imgEstrelas.src = 'img/estrelas.png';
+    imgEstrelas.src = "./img/praiainha.png";
     imgEstrelas.onload = verificaCarregamento;
 
     imgNuvens = new Image();
-    imgNuvens.src = 'img/nuvens.png';
+    imgNuvens.src = "./img/praiainha.png";
     imgNuvens.onload = verificaCarregamento;
 
     imgNave = new Image();
-    imgNave.src = "img/nave.png";
+    imgNave.src = "img/naveheroi.png";
     imgNave.onload = verificaCarregamento;
 
     imgInimigo = new Image();
-    imgInimigo.src = "img/inimigo.png";
+    imgInimigo.src = "./img/navevilao.png";
     imgInimigo.onload = verificaCarregamento;
 
     imgExplosao = new Image();
-    imgExplosao.src = "img/explosao.png";
+    imgExplosao.src = "./img/explosao.png";
     imgExplosao.onload = verificaCarregamento;
 
     musicaFundo = new Audio();
-    musicaFundo.src = 'snd/musica-acao.mp3';
+    musicaFundo.src = "sound/musica-acao.mp3";
     musicaFundo.load();
     musicaFundo.volume = 0.5;
     musicaFundo.loop = true;
@@ -188,7 +188,7 @@ criarObjetos();
     else if (tecla == 40) { // Seta para baixo
     nave.descer(30);
     } 
-    else if (tecla == 32) { // Seta para baixo
+    else if (tecla == 32) { // Seta para space
     nave.atirar();
     }
 
