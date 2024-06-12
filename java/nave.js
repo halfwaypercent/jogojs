@@ -56,8 +56,8 @@ function Nave(contexto, imagem, x, y, imgExplosao) {
             retangulosColisao: function() {
                 var rets = [
                 //{x: this.x, y: this.y, largura: this.largura, altura: this.altura}
-                {x: this.x+35, y: this.y+10, largura: 10, altura: 20},
-                {x: this.x+10, y: this.y+30, largura: 60, altura: 30}
+                {x: this.x+20, y: this.y+10, largura: 10, altura: 20},
+                {x: this.x+10, y: this.y+30, largura: 30, altura: 10}
                 ];
                 var ctx = this.contexto;
                 for (var i in rets) {
