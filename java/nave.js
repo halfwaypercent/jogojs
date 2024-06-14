@@ -3,7 +3,7 @@ function Nave(contexto, imagem, x, y, imgExplosao) {
     this.contexto = contexto;
     this.imagem = imagem;
     this.x = x;
-    this.y = y;
+    this.y = 450;
     this.imgExplosao = imgExplosao;
     this.largura = this.imagem.width;
     this.altura = this.imagem.height;
@@ -22,8 +22,7 @@ function Nave(contexto, imagem, x, y, imgExplosao) {
         },
 
         direita : function(deslocamento) {
-        if (this.x < this.contexto.canvas.width - this.largura -
-        deslocamento) {
+        if (this.x < 500 - deslocamento) {
         this.x += deslocamento;
         }
         },
@@ -41,8 +40,7 @@ function Nave(contexto, imagem, x, y, imgExplosao) {
             },
 
             descer : function(deslocamento) {
-            if (this.y <= this.contexto.canvas.height - this.altura -
-            deslocamento) {
+            if (this.y < 470 - deslocamento) {
             this.y += deslocamento;
             }
             },
