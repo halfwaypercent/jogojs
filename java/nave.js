@@ -22,7 +22,7 @@ function Nave(contexto, imagem, x, y, imgExplosao) {
         },
 
         direita : function(deslocamento) {
-        if (this.x < 500 - deslocamento) {
+        if (this.x < 440 - deslocamento) {
         this.x += deslocamento;
         }
         },
@@ -54,13 +54,13 @@ function Nave(contexto, imagem, x, y, imgExplosao) {
             retangulosColisao: function() {
                 var rets = [
                 //{x: this.x, y: this.y, largura: this.largura, altura: this.altura}
-                {x: this.x+20, y: this.y+10, largura: 10, altura: 20},
-                {x: this.x+10, y: this.y+30, largura: 30, altura: 10}
+                {x: this.x+48, y: this.y+44, largura: 10, altura: 25},
+                {x: this.x+20, y: this.y+68, largura: 70, altura: 1}
                 ];
                 var ctx = this.contexto;
                 for (var i in rets) {
                 ctx.save();
-                ctx.strokeStyle = 'yellow';
+                ctx.strokeStyle = '#7c1016';
                 ctx.strokeRect(rets[i].x, rets[i].y, rets[i].largura, rets[i].altura);
                 ctx.restore();
                 }
